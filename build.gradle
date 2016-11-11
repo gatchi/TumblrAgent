@@ -35,11 +35,20 @@ buildscript {
 }
 
 android {
-	compileSdkVersion 23
+	compileSdkVersion 24
 	buildToolsVersion "23.0.3"
+	
+	defaultConfig {
+		targetSdkVersion 24
+	}
+	
 	buildTypes {
 		debug {
 			debuggable true
 		}
+	}
+	
+	lintOptions {
+		disable 'ProtectedPermissions'
 	}
 }
